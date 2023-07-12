@@ -19,9 +19,7 @@ renv::init(bare = TRUE)
 
 # Install the packages
 install.packages(c(
-  "weed", "openxlsx", "sf", "rgdal", "ggmap", "tidyverse",
-  "dplyr", "stringr", "tidyr", "ggplot2", "spdep", "splm", "mice",
-  "stargazer", "broom"
+  "tidyverse", "dplyr", "stringr", "tidyr", "rvest", "pdftools", "rlang"
   ))
 
 # Take a snapshot of the renv
