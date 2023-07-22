@@ -72,6 +72,8 @@ for(k in 1:length(legislaturen)) {
   
   # mit den Download-Links die Dateien herunterladen
   download_links$sitzung = NA
+  # Ordner für Downloads erstellen (falls dieser nicht bereits existiert)
+  dir.create(file.path("download_files"), showWarnings = F)
   for(i in 1:nrow(download_links)) {
     for(j in 1:nrow(sitzungen)) {
       # Spalte mit der Sitzung ergänzen, in der der Antrag eingebracht wurde
@@ -133,4 +135,4 @@ for(k in 1:length(legislaturen)) {
   }
   rm(i, j, file)
 }
-rm(k, legislaturen, urls, download_links, sitzungen, sitzung_name)
+rm(k, legislaturen, urls, download_links, sitzungen, sitzung_name, get_links)
